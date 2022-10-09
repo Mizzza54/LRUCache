@@ -17,17 +17,6 @@ public class Node<K, V> {
         this.value = value;
     }
 
-    public void safeDelete() {
-        if (this.prev != null) {
-            assert (this.prev.next == this);
-            this.prev.next = this.next;
-        }
-        if (this.next != null) {
-            assert (this.next.prev == this);
-            this.next.prev = this.prev;
-        }
-    }
-
     public K getKey() {
         return key;
     }
